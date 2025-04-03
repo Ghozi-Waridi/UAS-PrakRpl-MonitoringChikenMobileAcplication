@@ -1,0 +1,1 @@
+{"database":{"rules":"database.rules.json"},"flutter":{"platforms":{"android":{"default":{"projectId":"project-chicken-rpl","appId":"1:971643947463:android:a856b1b9152b19c4d331e2","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"project-chicken-rpl","configurations":{"android":"1:971643947463:android:a856b1b9152b19c4d331e2"}}}}}}
