@@ -6,6 +6,9 @@ import 'package:project_uas/Configs/Routes/Routes.dart';
 import 'package:project_uas/Feature/Data_ayam/controller/DataAyam_controller.dart';
 import 'package:project_uas/Feature/History/controller/History_controller.dart';
 import 'package:project_uas/Feature/Informations/controller/Information_controller.dart';
+import 'package:project_uas/Feature/auth/controller/Auth_controller.dart';
+import 'package:project_uas/utils/service/Notification_Service.dart';
+// import 'package:project_uas/Feature/auth/view/page/Auth_page.dart';
 
 void main() async {
 
@@ -13,9 +16,13 @@ void main() async {
 
   await Firebase.initializeApp();
 
+;
+  await NotificationService().init();
+
   Get.put(HistoryController());
   Get.put(InformationController());
   Get.put(DataAyamController());
+  Get.put(AuthController());
   runApp(MyApp());
 
 }
@@ -26,9 +33,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
        debugShowCheckedModeBanner: false,
       title: 'Chicken Project',
-      initialRoute: Routes.home,
+      initialRoute: Routes.auth,
       getPages: Pages.pages,
 
     );
+    // return MaterialApp(
+    //   home: AuthPage(),
+    // );
   }
 }
