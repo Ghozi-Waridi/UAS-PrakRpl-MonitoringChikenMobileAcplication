@@ -6,4 +6,5 @@ class ImageConstant {
   final String ic_sakit = "assets/ic_sakit.png";
   final String ic_mati = "assets/ic_mati.png";
 
+
 }
